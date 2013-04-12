@@ -77,4 +77,4 @@ class redirectOutputTo(object):
 def readSources(filename):
     return ''.join(open(filename,'r').readlines())
 
-run(host='0.0.0.0', port=sys.argv[1], debug=True)
+run(host=sys.argv[1], port=sys.argv[2], debug=True)

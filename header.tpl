@@ -38,7 +38,7 @@
               <li><a href="/">Home</a></li>
               <li class="active"><a href="/sources">Source code</a></li>
 % end
-              <li><a href="" target="_blank">GitHub</a></li>
+              <li><a href="https://github.com/marccarre/pyterminal-web" target="_blank">GitHub</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

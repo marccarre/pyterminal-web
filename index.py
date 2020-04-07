@@ -25,7 +25,7 @@ def sources():
     return dict(python=python,header=header,index=index,sources=sources,footer=footer)
 
 defaultCommand = 'print(\'Welcome!\')'
-hiddenContext = ('hiddenContext', 'resetTerminal', 'runPython', 'clean', 'precompile', 'execute', 'redirectOutputTo', 'readSources', 'index', 'sources', 'get', 'post', 'request', 'route', 'run', 'template', 'view', 'context', 'StringIO', '__doc__', '__file__', '__name__', '__package__', 'defaultCommand', 'history', 'sys', 'traceback') 
+hiddenContext = ('hiddenContext', 'resetTerminal', 'runPython', 'clean', 'precompile', 'execute', 'redirectOutputTo', 'readSources', 'index', 'sources', 'get', 'post', 'request', 'route', 'run', 'template', 'view', 'context', 'StringIO', '__doc__', '__file__', '__name__', '__package__', 'defaultCommand', 'history', 'sys', 'traceback')
 context = {}
 history = []
 
@@ -40,7 +40,7 @@ def resetTerminal():
 
 def runPython(command):
     buffer = StringIO()
-    
+
     def clean(command):
         ''' Remove Windows-style line ending and make sure single-line expressions evaluate. '''
         return command.replace('\r\n', '\n') + '\n\n'
@@ -68,7 +68,7 @@ class redirectOutputTo(object):
             (out, err, sys.stdout, sys.stderr) = (sys.stdout, sys.stderr, self.buffer, self.buffer)
             try:
                 return f(*args, **kwargs)
-            except: 
+            except:
                 self.buffer.write(traceback.format_exc())
             finally:
                 (sys.stdout, sys.stderr) = (out, err)

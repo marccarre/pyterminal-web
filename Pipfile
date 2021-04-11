@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-bottle = "==0.11.6"
+bottle = "==0.12.19"
 
 [requires]
 python_version = "3.7"
